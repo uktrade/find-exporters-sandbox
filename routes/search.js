@@ -6,21 +6,21 @@ var marketExported = require('../fixtures/market-exported.json')
 
 
 exports.region = function (req, res) {
-    res.json(region);
+    res.json(region)
 }
 
 exports.exportPropensity = function (req, res) {
-    res.json(exportPropensity);
+    res.json(exportPropensity)
 }
 
 exports.marketOfInterest = function (req, res) {
-    res.json(marketOfInterest);
+    res.json(marketOfInterest)
 }
 
 exports.serviceUsage = function (req, res) {
-    res.json(serviceUsage);
+    res.json(serviceUsage)
 }
 
 exports.marketExported = function (req, res) {
-    res.json(marketExported);
+    res.json(marketExported)
 }
