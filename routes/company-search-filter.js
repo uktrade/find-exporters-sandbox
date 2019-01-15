@@ -36,13 +36,20 @@ var filtersResponse = function(res, filters) {
     } else if (filters.last_export_evidence) {
         if (filters.last_export_evidence.min && !filters.last_export_evidence.max) {
             return res.json({})
-        } else if (filters.last_export_evidence.max && !filters.last_export_evidence.min) {
-            return res.json({})
-        } else if (filters.last_export_evidence.min && filters.last_export_evidence.max) {
-            return res.json(singleCompany)
-        } else if (filters.last_export_evidence.min == 'invalid') {
+        }
+
+        if (filters.last_export_evidence.max && !filters.last_export_evidence.min) {
             return res.json({})
         }
+
+        if (filters.last_export_evidence.min && filters.last_export_evidence.max) {
+          if (filters.last_export_evidence.min == 'invalid' || filters.last_export_evidence.max == 'invalid') {
+            return res.json({})
+          } else {
+            return res.json(singleCompany)
+          }
+        }
+
         return res.json({})
     } else if (filters.sic_codes) {
         return res.json(singleCompany)
