@@ -3,6 +3,7 @@ var exportPropensity = require('../fixtures/export-propensity.json')
 var marketOfInterest = require('../fixtures/market-of-interest.json')
 var serviceUsage = require('../fixtures/service-usage.json')
 var marketExported = require('../fixtures/market-exported.json')
+var sectors = require('../fixtures/sectors.json')
 
 
 exports.region = function (req, res) {
@@ -23,4 +24,8 @@ exports.serviceUsage = function (req, res) {
 
 exports.marketExported = function (req, res) {
     res.json(marketExported)
+}
+
+exports.sectors = function (req, res) {
+    res.json(sectors)
 }

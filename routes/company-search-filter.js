@@ -70,5 +70,7 @@ var filtersResponse = function(res, filters) {
         return res.json(singleCompany)
     } else if (filters.service_usage) {
         return res.json(singleCompany)
+    } else if (filters.sectors) {
+        return res.json(singleCompany)
     }
 }
