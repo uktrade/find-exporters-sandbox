@@ -9,6 +9,7 @@
                 "company_id": 63643,
                 "company_name": "single company",
                 "datahub_company_id": "123",
+                "line_of_business": "Services",
                 "dit_sectors": "Heart",
                 "employee_range": "50 to 249",
                 "export_propensity": "Very low",
